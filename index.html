@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Task Manager</h1>
+
+  <!-- Input Form -->
+  <form id="task-form">
+    <input type="text" id="task-name" placeholder="Task Name" required />
+    <select id="task-category" required>
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Study">Study</option>
+    </select>
+    <input type="date" id="task-deadline" required />
+    <select id="task-status">
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+    <button type="submit">Add Task</button>
+  </form>
+
+  <!-- Filter Controls -->
+ <div class="filter-container">
+  <div>
+    <label for="filter-status">Status:</label>
+    <select id="filter-status">
+      <option value="All">All</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+      <option value="Overdue">Overdue</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="filter-category">Category:</label>
+    <select id="filter-category">
+      <option value="All">All Categories</option>
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Study">Study</option>
+    </select>
+  </div>
+</div>
+
+  <!-- Display Container -->
+  <ul id="task-list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
